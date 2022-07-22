@@ -2,22 +2,14 @@ import java.util.Scanner;
 
 public class Game {
 
+    static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to Snake And Ladder!!!!!!!!");
-
-        Scanner sc = new Scanner(System.in);
-
+    public static void run(Player p1, Player p2){
         int turn = 0, maxTurns = 1000;
-
-//        int numberOfPlayers = in.nextInt();
-
-        Player p1 = new Player("A", 1);
-        Player p2 = new Player("B", 2);
         PlayGround.render();
         System.out.println("Both players are at 0");
         while(turn < maxTurns) {
-            System.out.println("Press any character and then Enter!!");
+            System.out.println("Turn for" + turn%2 + " Press any character and then Enter!!");
             sc.next();
 
             int diceRoll = Dice.roll();
@@ -31,5 +23,13 @@ public class Game {
             PlayGround.render();
             turn++;
         }
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Snake And Ladder!!!!!!!!");
+        Player p1 = new Player("A", 1);
+        Player p2 = new Player("B", 2);
+        run(p1,p2);
     }
 }

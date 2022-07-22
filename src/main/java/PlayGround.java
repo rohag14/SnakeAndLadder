@@ -6,6 +6,9 @@ public class PlayGround {
     static int row = 10;
     static int column = 10;
     static int p1 = 0, p2 = 0;
+    List<Player> players = new ArrayList<>();
+    List<Snake> snakes = new ArrayList<>();
+    List<Ladder> ladders  = new ArrayList<>();
     static List<Cell> matrix = new ArrayList<>();
     static {
         for(int i=0;i<=100;i++) {
@@ -16,35 +19,6 @@ public class PlayGround {
 
         matrix.set(10, new Cell("LT",10,50));
         matrix.set(50,new Cell("LH",50,50));
-//        Map<Integer, Integer> snake;
-//        Map<Integer, Integer> ladder;
-//        public int sz;
-//        static int roll(int l, int r){
-//            int len = (r-l+1);
-//            return (int)(Math.random()*len)%len + 1;
-//        }
-//        static public void generateSnake(Main obj, int n){
-//            System.out.println("snake");
-//            for(int i = 0; i < n; i++){
-//                int a = Main.roll(1, obj.sz-1);
-//                int b = Main.roll(a + 1, obj.sz);
-//
-//                if(b != obj.sz && !obj.ladder.containsKey(b)){
-//                    obj.snake.put(b, a);
-//                }
-//            }
-//
-//        }
-//        static public void generateLadder(Main obj, int n){
-//            System.out.println("ladder");
-//            for(int i = 0; i < n; i++){
-//                int a = Main.roll(2, obj.sz-1);
-//                int b = Main.roll(a + 1, obj.sz);
-//                if(!obj.snake.containsKey(b)){
-//                    obj.ladder.put(a, b);
-//                }
-//            }
-//        }
     }
 
 
