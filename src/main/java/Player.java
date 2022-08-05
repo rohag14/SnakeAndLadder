@@ -9,10 +9,10 @@ public class Player{
         this.pos = 0;
     }
 
-    void play(int diceRoll){
+    void play(int diceRoll, PG pg){
         int endPos = this.pos + diceRoll;
 
-        if (PlayGround.update(this, endPos)) {
+        if (pg.update(this, endPos)) {
             System.out.println("Valid Move!!!");
         }
         else {
